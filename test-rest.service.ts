@@ -10,7 +10,7 @@ export class TestRestService{
         customerId: ID,
         options?: ListQueryOptions<Order>,
     ): Promise<PaginatedList<Order>> {
-        const active = true;
+        const active = true; // I added this line. Everything else is from the @vendure/core library
         return this.listQueryBuilder
             .build(Order, options, {
                 relations: [
